@@ -546,6 +546,7 @@ label.error{
 
 .col-base{
   margin-top: 3em;
+  padding-left: 20px;
 }
 
 .section{
@@ -1254,6 +1255,7 @@ label.error{
 }
 
 .col-about-info p:last-child{
+  
   margin-bottom: 0; 
 }
 
