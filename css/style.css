@@ -604,6 +604,11 @@ label.error{
 }
 
 
+ /* Media query for mobile devices */
+ @media only screen and (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }}
 
 /* 2.1 Brand */
 
