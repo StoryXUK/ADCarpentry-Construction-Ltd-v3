@@ -1229,6 +1229,7 @@ label.error{
 
 
 
+
 /* ------------------------------------------------------------------------------- */
 /*  4. About
 /* ------------------------------------------------------------------------------- */
@@ -2361,6 +2362,7 @@ img.mfp-img{
     font-size: 85%;
   }
 
+ 
 
 
   /* Slider */
@@ -2373,9 +2375,9 @@ img.mfp-img{
   }
 
   .arrow-right{
-    left: 28vmin;
+    /* left: 28vmin;
     right: auto;
-    margin-left: 5em;
+    margin-left: 5em; */
     top: 43.5vmin;
     bottom: auto;
   }
