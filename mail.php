@@ -5,32 +5,29 @@ $phone = $_POST["phone"];
 $company = $_POST["company"];
 $message = $_POST["message"];
 
-
-$EmailTo = "000.adawe43@gmail.com";
+$EmailTo = "adawe43@gmail.com";
 $Subject = "New Message Received";
 
-// prepare email body text
-$Fields .= "Name: ";
-$Fields .= $name;
-$Fields .= "\n";
+// Prepare email body text
+$Fields = "Name: " . $name . "\n";
+$Fields .= "Email: " . $email . "\n";
+$Fields .= "Phone: " . $phone . "\n";
+$Fields .= "Company: " . $company . "\n";
+$Fields .= "Message: " . $message . "\n";
 
-$Fields.= "Email: ";
-$Fields .= $email;
-$Fields .= "\n";
+// Additional headers
+$headers = "From: info@ad-carpentry.com\r\n";
+$headers .= "Reply-To: " . $email . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-$Fields .= "Phone: ";
-$Fields .= $phone;
-$Fields .= "\n";
+// Send email
+$success = mail($EmailTo, $Subject, $Fields, $headers);
 
-$Fields .= "Company: ";
-$Fields .= $company;
-$Fields .= "\n";
-
-$Fields .= "Message: ";
-$Fields .= $message;
-$Fields .= "\n";
-
-
-// send email
-$success = mail($EmailTo,  $Subject,  $Fields, "From:".$email);
-
+// Check if mail was sent successfully
+if ($success) {
+    echo "Your message has been sent successfully.";
+} else {
+    echo "An error occurred while sending your message.";
+}
+?>
