@@ -16,7 +16,7 @@ $Fields .= "Company: " . $company . "\n";
 $Fields .= "Message: " . $message . "\n";
 
 // Additional headers
-$headers = "From: info@ad-carpentry.com\r\n";
+$headers = "From: adawe43@gmail.com\r\n";
 $headers .= "Reply-To: " . $email . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
